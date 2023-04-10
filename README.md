@@ -1,1 +1,0 @@
-# Scand_TestTask
