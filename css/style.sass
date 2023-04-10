@@ -1,0 +1,399 @@
+:root
+    $white: #FFFFFF !global
+    $black: #000000 !global
+    $dark-blue: #0A2640 !global
+    $grey: #777777 !global
+    $green: #65E4A3 !global
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+li
+    list-style-type: none
+a
+    text-decoration: none
+    color: $black
+button
+    cursor: pointer
+body
+    padding: 56px 7.5% 117px 7.5%
+    font-family: 'Open Sans', sans-serif
+header
+    display: flex
+    justify-content: space-between
+    margin-bottom: 5.14vw
+nav
+    ul
+        display: flex
+        align-items: center
+        gap: 2.86vw
+        font-size: 16px
+        font-weight: 600
+    a
+        color: $dark-blue
+    button
+        background-color: transparent
+        padding: 8px 40px
+        border: 2px solid $dark-blue
+        border-radius: 24px
+        font-size: 16px
+        font-weight: 600
+        color: $dark-blue
+
+.main-post
+    & > p
+        text-align: center
+        font-size: 20px
+        color: $dark-blue
+    & > h1
+        text-align: center
+        font-size: 4.57vw
+        color: $dark-blue
+        font-weight: normal
+
+.post
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 4.79vw 0 5.14vw 0
+
+.image, .description
+    width: 45.8%
+
+.image 
+    img
+        max-width: 100%
+        height: auto
+
+.date
+    font-size: 16px
+    color: $grey
+    margin-bottom: 12px
+
+    span
+        font-weight: bold
+        color: $dark-blue
+        padding-right: 12px
+
+.description 
+    h2
+        font-family: 'Manrope', sans-serif
+        font-weight: normal
+        font-size: 3.43vw
+
+.author
+    display: flex
+    align-items: center
+    gap: 12px
+    margin-top: 20px
+
+hr
+    height: 1px
+    background-color: $dark-blue
+    margin-bottom: 6.86vw
+    border: none
+
+.news
+    padding: 0 7.5%
+
+    h2
+        font-size: 3.43vw
+        font-family: 'Manrope', sans-serif
+        font-weight: normal
+    button
+        display: block
+        margin: 0 auto
+        background-color: transparent
+        padding: 1.14vw 4vw
+        border: 2px solid $dark-blue
+        border-radius: 56px
+        font-size: 20px
+        font-weight: 700
+        color: $dark-blue
+ 
+.grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: 50px
+    row-gap: 80px
+    margin: 2.86vw 0 6.86vw 0
+
+.grid__item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.info 
+    img
+        width: 100%
+        margin-bottom: 24px
+
+.enterprise
+    position: relative
+    z-index: 3
+    overflow: hidden
+    background-color: $dark-blue
+    border-radius: 12px
+    padding: 6% 20%
+    margin: 8.86vw 0 13.14vw 0
+
+    img
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+        width: 65%
+
+    p
+        font-family: 'Manrope', sans-serif
+        text-align: center
+        font-size: 3.43vw
+        color: $white
+        margin-bottom: 3.57vw
+
+    div
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 24px
+
+        input
+            background: $white
+            border: 2px solid $white
+            border-radius: 17.14vw
+            font-size: 1.43vw
+            padding: 0.86vw 0 0.86vw 2.29vw
+            height: 4vw
+            width: 26.43vw
+
+            &::placeholder
+                color: $black
+
+        button
+            background: $green
+            border: 2px solid $green
+            border-radius: 4vw
+            font-size: 1.43vw
+            font-weight: 700
+            color: $dark-blue
+            padding: 1.14vw 4vw
+
+footer
+    display: flex
+    justify-content: space-between
+    color: $grey
+    height: 250px
+
+    a
+        color: $grey
+
+.logo-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 25%
+
+.links
+    display: flex
+    justify-content: space-between
+    width: 53%
+    margin-right: 5.64vw
+
+    p
+        margin-bottom: 2.29vw
+
+        span
+            color: $black
+            font-weight: 700    
+
+    ul
+        display: flex
+        flex-direction: column
+        gap: 32px
+
+        span
+            font-size: 13px
+            font-weight: 700
+            color: $dark-blue
+            padding: 5px 12px
+            background-color: $green
+            border-radius: 120px
+            margin-left: 10px
+
+header
+    @media screen and (max-width: 800px)
+        flex-direction: column
+        gap: 6.25vw
+    a
+        @media screen and (max-width: 800px)
+            text-align: center
+
+nav
+    ul
+        @media screen and (max-width: 800px)
+            justify-content: space-between
+
+        @media screen and (max-width: 550px)
+            font-size: 14px
+
+    button
+        @media screen and (max-width: 550px)
+            padding: 8px 24px
+            border-radius: 24px
+            font-size: 14px
+
+.main-post
+    & > p
+        @media screen and (max-width: 800px)
+            margin-bottom: 1.50vw
+
+    & > h1
+        @media screen and (max-width: 800px)
+            font-size: 6.57vw                
+
+.post
+    @media screen and (max-width: 800px)
+        flex-direction: column
+        margin: 8.38vw 0 9vw 0
+
+.image, .description
+    @media screen and (max-width: 800px)
+        width: 100%
+
+.image
+    @media screen and (max-width: 800px)
+        margin-bottom: 6.25vw
+
+    @media screen and (max-width: 550px)
+        margin-bottom: 8.25vw
+    img
+        @media screen and (max-width: 800px)
+            width: 100%
+
+.description
+    h2
+        @media screen and (max-width: 800px)
+            font-size: 4.43vw
+
+.author 
+    img
+        @media screen and (max-width: 550px)
+            width: 10%
+
+.news
+    @media screen and (max-width: 800px)
+        padding: 0
+    h2
+        @media screen and (max-width: 800px)
+            font-size: 5.43vw
+
+        @media screen and (max-width: 550px)
+            font-size: 7.43vw
+
+    button
+        @media screen and (max-width: 800px)
+            padding: 2vw 7vw
+            border-radius: 7vw
+
+        @media screen and (max-width: 550px)  
+            padding: 2.91vw 10.18vw
+            border-radius: 10.18vw
+            font-size: 18px        
+
+.grid
+    @media screen and (max-width: 800px)
+        grid-template-columns: repeat(2, 1fr)
+
+    @media screen and (max-width: 550px)
+        grid-template-columns: 1fr
+        margin: 6.86vw 0 9.86vw 0
+        row-gap: 60px    
+
+.date
+    @media screen and (max-width: 800px)
+        font-size: 14px
+
+.enterprise
+    @media screen and (max-width: 800px)
+        padding: 6% 10%
+
+    @media screen and (max-width: 550px)
+        padding: 6%
+    
+    p
+        @media screen and (max-width: 800px)
+            font-size: 4.43vw
+            margin-bottom: 4.57vw
+
+        @media screen and (max-width: 550px)
+            font-size: 5.43vw
+            margin-bottom: 6.57vw
+
+    div
+        @media screen and (max-width: 800px)
+            justify-content: center
+            gap: 3vw
+
+        @media screen and (max-width: 550px)
+            flex-direction: column
+            gap: 5vw
+
+        input
+            @media screen and (max-width: 800px)
+                font-size: 2.50vw
+                padding: 1.5vw 0 1.5vw 4vw
+                height: 7vw
+                width: 46.25vw
+                border-radius: 30vw
+
+            @media screen and (max-width: 550px)
+                font-size: 3.64vw
+                padding: 2.18vw 0 2.18vw 5.82vw
+                height: 10.18vw
+                width: 67.27vw
+                border-radius: 43.64vw
+
+        button
+            @media screen and (max-width: 800px)
+                border-radius: 7vw
+                font-size: 2.50vw
+                padding: 1.5vw 3vw
+
+            @media screen and (max-width: 550px)
+                border-radius: 10.18vw
+                font-size: 3.64vw
+                padding: 2.91vw 10.18vw
+    
+    img
+        @media screen and (max-width: 800px)
+            width: 70%
+        @media screen and (max-width: 550px)
+            width: 80%                                 
+footer
+    @media screen and (max-width: 800px)
+        flex-direction: column-reverse
+        gap: 80px
+        height: 100%
+    a
+        @media screen and (max-width: 550px)
+            font-size: 13px
+
+.logo-info
+    @media screen and (max-width: 800px)
+        width: 100%
+        gap: 40px
+
+.links
+    @media screen and (max-width: 800px)
+        width: 100%
+        margin: 0
+    p
+        @media screen and (max-width: 550px)
+            margin-bottom: 5.29vw
+    ul
+        span
+            @media screen and (max-width: 550px)
+                font-size: 10px
+                padding: 5px 4px
+                margin-left: 0                            
